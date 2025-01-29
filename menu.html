@@ -1,0 +1,46 @@
+<div class="content-animate">
+    <div class="container pb-5">
+        <br>
+        <div class="alert alert-success alert-dismissible fade show" role="alert" ng-show="showSuccessAlert">
+            {{alertMessage}}
+            <button type="button" class="btn-close" aria-label="Close" ng-click="closeAlert()"></button>
+        </div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" ng-show="showWarningAlert">
+            {{alertMessage}}
+            <button type="button" class="btn-close" aria-label="Close" ng-click="closeAlert()"></button>
+        </div>
+        <br><br>
+        <hr>
+        <div class="display-3 fw-bold">
+            Your Hunger, Our Menu
+        </div>
+        <hr>
+        <br><br><br>
+        <div class="row pb-5 mb-5">
+            <div ng-repeat="item in items" class="col-sm-3 py-5">
+                <div class="menu_card">
+                    <div class="content">
+                        <div class="image-frame">
+                            <img src="{{item.image_url}}" alt="" class="img-fluid rounded-3">
+                        </div>
+                        <div class="description">
+                            <p class="title">
+                                <strong>{{ item.name }}</strong>
+                            </p>
+                            <p class="info">
+                                {{ item.description }}
+                            </p>
+                            <p class="price">
+                                $ {{ item.price }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <button class="btn add-btn" ng-click="addToCart(item)">+</button>
+                        <button class="btn heart-btn" ng-click="addToWishlist(item)">❤️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

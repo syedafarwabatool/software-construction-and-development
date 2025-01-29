@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html ng-app="myMod" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorFiesta</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-sanitize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
+    <script src="main_module.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body ng-controller="MainController" ng-class="bgClass">
+
+
+    <br>
+    <nav class="navbar navbar-expand-sm bordern navbar-dark rounded-pill mx-4" style="background-color: black;">
+        <div class="d-flex align-items-center justify-content-between w-100 mx-5">
+
+            <!-- Left-aligned: Navbar Brand -->
+            <a class="navbar-brand fw-bold fs-4 zoom-text ms-5" href="#!">FlavorFiesta</a>
+
+            <!-- Center-aligned: List items -->
+            <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavId">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!menu" ng-class="{'active': isActive('/menu')}">
+                            <img src="./static/menu.svg" style="height: 25px;" class="img-fluid text-light" alt="">
+                            Menu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!about-us" ng-class="{'active': isActive('/about-us')}"><i
+                                class="bi bi-journal-bookmark"></i> About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!wishlist" ng-class="{'active': isActive('/wishlist')}"><i class="bi bi-clipboard2-heart"></i>
+                            Wishlist</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right-aligned: Button -->
+            <button class="custom-btn me-5" type="submit" data-bs-toggle="modal" data-bs-target="#OrderFood">
+                <span><i class="bi bi-cart3"></i> My Cart</span>
+            </button>
+        </div>
+    </nav>
+
+    <ng-view></ng-view>
+
+    <footer style=" height: auto;" class="bg-view-pink">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3 m-5 py-5">
+                <div class="row justify-content-start align-items-end">
+                    <div class="col-sm-5" >
+                        <img src="./static/chef.png" class="img-fluid" alt="" style="margin-right: 0px; margin-left: auto;">
+                    </div>
+                    <div class="col-sm-6 align-items-end justify-content-start">
+                        <h1 class="display-6 fw-bold">FlavorFiesta</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 d-flex flex-column justify-content-start my-5 py-5">
+                <div class="fs-3 fw-bold">
+                    Policy
+                </div>
+                <div class="lead">
+                    FAQ
+                </div>
+                <div class="lead">
+                    Privacy
+                </div>
+                <div class="lead">
+                    Shipping
+                </div>
+            </div>            
+            <div class="col-sm-2 my-5 py-5 d-flex flex-column justify-content-start">
+                <div class="fs-3 fw-bold">
+                    WE ARE OPEN
+                </div>
+                <div class="div">
+                    <div class="lead d-flex flex-row">
+                        <div class="fw-bold">Mon-Fri:&nbsp;&nbsp;</div>8am-11pm 
+                    </div>
+                    <div class="lead d-flex flex-row">
+                        <div class="fw-bold">Sat:&nbsp;&nbsp; </div>10am-6pm
+                    </div>
+                    <div class="lead d-flex flex-row">
+                        <div class="fw-bold">Sun:&nbsp;&nbsp; </div>10am-4pm
+                    </div>
+                </div>
+                
+            </div> 
+            <div class="col-sm-2 d-flex py-5 my-5 justify-content-start align-items-start">
+                <div class="row">
+                    <div class="fs-3 fw-bold col-sm-12 ">Stay Connected</div>
+                    <br><br><br>
+                    <div class="col-sm-12 d-flex justify-content-start">
+                        <i class="bi bi-facebook logos-hover"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="bi bi-instagram logos-hover"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="bi bi-twitter-x logos-hover"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="OrderFood" tabindex="-1" aria-labelledby="OrderFoodLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="OrderFoodLabel">Bag of Cravings</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div ng-if="cart.length == 0" class="fw-bold lead text-center py-5 fs-3">
+                        Cart’s empty, but the menu is full! 🥹
+                    </div>
+                    <div ng-repeat="item in cart" class="pt-5">
+                        <div class="row">
+                            <hr>
+                            <div class="col-sm-8 my-3 d-flex justify-content-between flex-column">
+                                <div class="fw-bold fs-3">
+                                    {{item.name}}
+                                </div>
+                                <div class="lead mb">
+                                    {{item.description}}
+                                </div>
+                            </div>
+                            <div class="col-sm-4 image-frame">
+                                <img src="{{item.image_url}}" alt="" class="img-fluid rounded-3">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="text-end me-5 fw-bold lead fs-4 price">
+                            $ {{item.price}}
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <h4 ng-if="!cart.length == 0" class="col-sm-12 text-end price pt-1 pb-2">Total Price: $ {{getTotalPrice()}}</h4>
+                    <button type="button" class="btn btn-outline-secondary btn-lg rounded-pill" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger btn-lg rounded-pill">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

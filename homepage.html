@@ -1,0 +1,111 @@
+<div class="content-animate">
+    <div class="container mt-5">
+        <div class="p-5 pt-0" style="color: black;">
+            <div class="row justify-content-around ">
+                <div class="col-sm-6 d-flex align-items-start ms-auto justify-content-end">
+                    <h1 class="mb-0 mt-5 me-1 display-4 fw-bold">Discover the Finest Bites Effortlessly <br><br>
+                    </h1>
+                </div>
+                <div class="col-sm-4 me-auto mb-0">
+                    <img class="img-fluid" style="height: 80%;"
+                        src="../static/chef.png"
+                        alt="">
+                </div>
+            </div>
+            <div class="row align-items-start">
+                <div class="col-sm-9 mt-0">
+                    <div class="form-group mt-0 align-items-start">
+                        <!-- Wrap input and suggestions in a relative container -->
+                        <div class="suggestion-container" style="position: relative;">
+                            <input type="text" class="form-control my-0" aria-describedby="helpId"
+                                placeholder="Search..." ng-model="jobSearch" ng-keypress="checkEnter($event)"
+                                ng-change="getSuggestions()">
+                            <div class="suggestions" ng-if="suggestions.length > 0">
+                                <ul>
+                                    <li ng-repeat="job in suggestions" ng-click="openJobDetails(job.id)">
+                                        {{ job.position }} at {{ job.company }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-3 gap-2 d-grid md-block my-0">
+                    <button class="btn btn-outline-dark" ng-click="submitSearch()" type="button">
+                        Search &nbsp;&nbsp;<i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="white-bg">
+        <div class="container">
+            <br><br><br>
+            <hr>
+            <div class="display-3 fw-bold">
+                Explore our Features
+            </div>
+            <hr>
+            <br><br>
+            <div class="row mb-5 align-items-center justify-content-around">
+                <div class="card col-sm-3 mx-1 justify-content-start">
+                    <div class="row fw-normal text-start align-items-start justify-content-start mt-4 px-1">
+                        <img src="https://png.pngtree.com/png-vector/20230206/ourmid/pngtree-map-location-pin-with-red-png-image_6586103.png" alt="">
+                        <div class="fs-2 fw-bold py-3">
+                            Set Your Spot
+                        </div>
+                        <div class="fs-4">
+                            Where's the party at? Let's get your cravings to the right spot!
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-sm-3 mx-1 justify-content-start">
+                    <div class="row fw-normal text-start align-items-start justify-content-start mt-4 px-1">
+                        <img src="https://i.pinimg.com/originals/2d/2b/c3/2d2bc3583a8de4d6ea4a28aa9680899c.png" alt="">
+                        <div class="fs-2 fw-bold py-3">
+                            Pick Your Dish
+                        </div>
+                        <div class="fs-4">
+                            Your tastebuds are calling—answer with a delicious order!
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-sm-3 mx-1 justify-content-start">
+                    <div class="row fw-normal text-start align-items-start justify-content-start mt-4 px-1">
+                        <img src="https://clipart-library.com/2023/Online-Payment-PNG-Clipart.png" alt="">
+                        <div class="fs-2 fw-bold py-3">
+                            Pay Your Way
+                        </div>
+                        <div class="fs-4">
+                            Pay like a pro, and let the food flow!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <hr>
+            <div class="display-3 fw-bold">
+                Ready to Dive in
+            </div>
+            <div class="fs-3" style="color: #c32054;">
+                Install now and let the feast begin!
+            </div>
+            <hr>
+            <br><br>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="fs-2">
+                        Enjoy delicious bites delivered fast. Choose from a <br>variety of cuisines
+                    </div>
+                    <img src="https://i.pinimg.com/736x/e5/90/47/e59047f26d4c3570743b2e842f4bdf87.jpg" class="img-fluid text-center" style="height: 50%;">
+                </div>
+                <div class="col-sm-4">
+                    <img src="https://png.pngtree.com/png-clipart/20240712/original/pngtree-girl-order-food-from-mobile-app-png-image_15542969.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

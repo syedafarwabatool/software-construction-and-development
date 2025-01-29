@@ -1,0 +1,27 @@
+<div class="content-animate">
+    <div class="container py-5">
+        <div ng-if="wishlist.length == 0" class="fw-bold lead text-center fs-3">
+            Your Wishlist is empty, but the menu is full! 🥹
+        </div>
+        <div ng-repeat="item in wishlist" class="">
+            <div class="row">
+                <hr>
+                <div class="col-sm-8 my-3 d-flex justify-content-between flex-column">
+                    <div class="fw-bold fs-3">
+                        {{item.name}}
+                    </div>
+                    <div class="lead mb">
+                        {{item.description}}
+                    </div>
+                </div>
+                <div class="col-sm-4 image-frame">
+                    <img src="{{item.image_url}}" alt="" class="img-fluid rounded-3">
+                </div>
+            </div>
+            <hr>
+            <div class="text-end me-5 fw-bold lead fs-4 price">
+                $ {{item.price}}
+            </div>
+        </div>
+    </div>
+</div>

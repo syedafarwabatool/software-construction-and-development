@@ -1,0 +1,376 @@
+.bg-view-pink {
+    /* background-color: #Fc8eac !important; */
+    background-image: url('./static/bg_blur.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    /* background-position: center; */
+}
+
+.bg-default {
+    background-color: white !important;
+}
+
+.bg-view-black {
+    background-color: rgb(14, 14, 14);
+}
+
+.white-bg {
+    background-color: white;
+    /* Set background color to white */
+    margin: 0;
+    /* Remove any margins */
+    padding: 0;
+    /* Remove any padding */
+    width: 100%;
+    /* Make it full width */
+    height: auto;
+    /* Make it full height (optional) */
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* Button styles */
+.custom-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fc8eac;
+    /* Initial text color */
+    background-color: black;
+    /* Background color */
+    border: 2px solid #fc8eac;
+    /* Outline color */
+    border-radius: 50px;
+    /* Pill-shaped border */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Smooth hover effect */
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Hover styles */
+.custom-btn:hover {
+    color: black;
+    /* Change text color */
+    background-color: #fc8eac;
+    /* Change background color */
+    border-color: #fc8eac;
+    /* Ensure border matches background */
+}
+
+.spaced-list li {
+    margin-bottom: 20px;
+    /* Adjust the value to control spacing */
+}
+
+
+/* General styling for nav-links */
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+    /* Needed to position the ::after element correctly */
+    color: white !important;
+    /* Default color */
+}
+
+/* Active link text color */
+.navbar-nav .nav-item .nav-link.active {
+    color: #Fc8eac !important;
+    /* Change active tab text color */
+}
+
+/* Active tab styling with the bottom line */
+.navbar-nav .nav-item .nav-link.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    /* Height of the bottom line */
+    background-color: #Fc8eac;
+    /* Color of the bottom line */
+    position: absolute;
+    bottom: -8px;
+    /* Position the line lower without affecting the text */
+    left: 0;
+}
+
+/* Ensure that the ::after element does not show for inactive tabs */
+.navbar-nav .nav-item .nav-link:not(.active)::after {
+    content: none;
+    /* Remove any ::after content for non-active tabs */
+}
+
+/* Hover styling */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #Fc8eac;
+    /* Change color on hover */
+}
+
+/* Add animation for the bottom line when active */
+.navbar-nav .nav-item .nav-link.active::after {
+    content: '';
+    display: block;
+    width: 0;
+    /* Start with 0 width */
+    height: 3px;
+    background-color: #Fc8eac;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    animation: underline-expand 0.4s forwards;
+    /* Animation for expanding the underline */
+}
+
+/* Animation for expanding the underline */
+@keyframes underline-expand {
+    0% {
+        width: 0;
+        /* Start from 0 width */
+    }
+
+    100% {
+        width: 100%;
+        /* Expand to full width */
+    }
+}
+
+/* Hover styling with smooth color transition */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #Fc8eac !important;
+    /* Change text color to yellow on hover */
+    transition: color 0.3s ease-in-out;
+    /* Smooth transition for text color */
+}
+
+/* Hover styling for active tab */
+.navbar-nav .nav-item .nav-link.active:hover {
+    color: #Fc8eac !important;
+    /* Change active tab text color to yellow on hover */
+}
+
+/* Animation for the active tab's text color */
+.navbar-nav .nav-item .nav-link.active {
+    transition: color 0.3s ease-in-out;
+    /* Smooth transition for text color */
+}
+
+/* General styling for nav-links */
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+    /* Needed to position the ::after element correctly */
+    color: white !important;
+    /* Default color */
+    transition: color 0.3s ease-in-out;
+    /* Add smooth transition for color change */
+}
+
+
+/* Normal text styling */
+.zoom-text {
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #fc8eac !important;
+    display: inline-block;
+    /* Required for transform to work on inline elements */
+}
+
+/* Zoom effect on hover */
+.zoom-text:hover {
+    transform: scale(1.2);
+    /* Slightly increase size on hover */
+    color: #f39c12;
+    /* Optional: Change text color on hover */
+}
+
+/* Style for the animated content inside ng-view */
+.content-animate {
+    animation: fadeInContent 0.5s ease-in-out;
+    /* Animation for smooth fade-in */
+    opacity: 0;
+    /* Start with hidden opacity */
+    animation-fill-mode: forwards;
+    /* Keeps opacity at 1 after animation */
+}
+
+.card {
+    box-sizing: border-box;
+    width: 190px;
+    height: 550px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid rgb(235, 32, 201);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.card:hover {
+    border: 3px solid #F53DD3;
+    box-shadow: 12px 17px 51px #F53D7D;
+    border-radius: 50px 15px 50px 15px;
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+
+.menu_card {
+    width: 220px;
+    height: 360px;
+    overflow: visible;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu_card::before,
+.content {
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px #e7a3b922;
+    transition: transform 300ms, box-shadow 200ms;
+}
+
+.menu_card::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #c33764;
+    transform: rotateZ(5deg);
+}
+
+.description {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.info {
+    color: #00000066;
+}
+
+.price {
+    font-weight: bold;
+    color: #c33764;
+}
+
+.description p {
+    margin-bottom: 10px;
+}
+
+.menu_card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotateZ(-5deg);
+}
+
+.image-frame {
+    width: 190px;  /* Frame width */
+    height: 200px; /* Frame height */
+    overflow: hidden; /* Hide any part of the image that overflows the frame */
+    position: relative;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes the image cover the area, cropping if necessary */
+    object-position: center; /* Optionally center the image within the frame */
+}
+
+
+/* Hover effect for the card */
+.menu_card:hover::before,
+.menu_card:hover .content {
+    transform: rotateZ(0deg);
+    background-color: #c33764;
+}
+
+.menu_card:active::before,
+.menu_card:active .content {
+    box-shadow: none;
+}
+
+/* Show buttons on hover */
+.menu_card:hover .card-buttons {
+    opacity: 1; /* Make buttons visible */
+}
+
+.card-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 300ms ease-in-out;
+}
+
+/* Buttons style */
+.card-buttons .btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    color: #c33764;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 200ms, color 200ms;
+}
+
+.card-buttons .btn:hover {
+    background-color: #c33764;
+    color: white;
+}
+
+.modal-header{
+    background-color: #c33764;
+}
+
+#OrderFoodLabel{
+    color: white;
+}
+
+.about-us{
+    text-align: justify;
+    color: #723b4d;
+    /* -webkit-text-stroke: 0.2px #723b4d; */
+}
+
+/* Define the fade-in animation */
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

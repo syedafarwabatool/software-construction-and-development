@@ -1,0 +1,101 @@
+{
+    "menu": [
+        {
+            "id": 1,
+            "name": "Cheese Burger",
+            "description": "A juicy beef patty with melted cheese, lettuce, and tomato on a soft bun.",
+            "price": 5.99,
+            "category": "Burgers",
+            "image_url": "https://images.unsplash.com/photo-1561758033-d89a9ad46330?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            
+        },
+        {
+            "id": 2,
+            "name": "Margherita Pizza",
+            "description": "Classic pizza topped with fresh tomatoes, mozzarella cheese, and basil.",
+            "price": 8.99,
+            "category": "Pizzas",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaKe5mIH7afbN9s67cRtOABS4Y0LfV1m-r87v4qgJckWELqvg&s"
+        },
+        {
+            "id": 3,
+            "name": "Veggie Pasta",
+            "description": "Pasta tossed in a savory vegetable sauce with fresh herbs.",
+            "price": 7.49,
+            "category": "Pasta",
+            "image_url": "https://www.budgetbytes.com/wp-content/uploads/2021/10/One-Pot-Veggie-Pasta-V1-768x1024.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Chicken Wings",
+            "description": "Crispy chicken wings served with a side of tangy dipping sauce.",
+            "price": 6.99,
+            "category": "Appetizers",
+            "image_url": "https://bakerbynature.com/wp-content/uploads/2015/02/Sweet-and-Spicy-Sriracha-Chicken-Wings-0-6.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Caesar Salad",
+            "description": "Fresh romaine lettuce, croutons, and parmesan cheese tossed in Caesar dressing.",
+            "price": 4.49,
+            "category": "Salads",
+            "image_url": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTC9Slm9R3jSxn89ynTQeTUml9vwHSExA1fnyNL_sNrbHyrAp08ImRdqBpUpxDxBisZoeIMH7M_innFnaCk9tPtTPNRQ37-dA8B_B0OvQ"
+        },
+        {
+            "id": 6,
+            "name": "Beef Tacos",
+            "description": "Spicy beef, lettuce, cheese, and salsa wrapped in a soft taco shell.",
+            "price": 3.99,
+            "category": "Tacos",
+            "image_url": "https://plus.unsplash.com/premium_photo-1681406995009-36bf99ce02ad?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QmVlZiUyMFRhY29zfGVufDB8fDB8fHww"
+        },
+        {
+            "id": 7,
+            "name": "Spaghetti Bolognese",
+            "description": "Classic spaghetti served with a rich, savory meat sauce.",
+            "price": 9.99,
+            "category": "Pasta",
+            "image_url": "https://images.unsplash.com/photo-1626844131082-256783844137?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3BhZ2hldHRpJTIwQm9sb2duZXNlfGVufDB8fDB8fHww"
+        },
+        {
+            "id": 8,
+            "name": "Chicken Quesadilla",
+            "description": "Grilled chicken, cheese, and veggies in a warm flour tortilla.",
+            "price": 5.49,
+            "category": "Quesadillas",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR70Dsmm4_knU4KlHjTVfZ_fsdw7DgX7BoVQw&s"
+        },
+        {
+            "id": 9,
+            "name": "BBQ Ribs",
+            "description": "Tender ribs glazed with smoky BBQ sauce, served with a side of fries.",
+            "price": 12.99,
+            "category": "Main Course",
+            "image_url": "https://www.allrecipes.com/thmb/KVblK6SSqdxweb0IWhCmiN2_xas=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/22469-Barbecue-Ribs-ddmfs-4x3-208-0221b0213517493494a29c1c76a8d1cc.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Chocolate Lava Cake",
+            "description": "Warm chocolate cake with a molten center, served with vanilla ice cream.",
+            "price": 4.99,
+            "category": "Desserts",
+            "image_url": "https://images.unsplash.com/photo-1673551490812-eaee2e9bf0ef?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hvY29sYXRlJTIwbGF2YSUyMGNha2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+            "id": 11,
+            "name": "Grilled Salmon",
+            "description": "Fresh salmon fillet grilled to perfection, served with steamed vegetables.",
+            "price": 14.99,
+            "category": "Main Course",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJy7e7FNp7D3XHt8SSWKZyej_gLn9u60YFFQ&s"
+        },
+        {
+            "id": 12,
+            "name": "Tiramisu",
+            "description": "Classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cream.",
+            "price": 5.99,
+            "category": "Desserts",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiuZEiGxyHJXztksX32QISpnNIJmez0H4JAw&s"
+        }
+    ]
+}
